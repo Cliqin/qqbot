@@ -39,7 +39,7 @@ async def cron_job():
     while True:
         now = datetime.datetime.now()
         if now.second == 0:
-            if now.minute == 0:
+            if now.minute % 15 == 0:
                 logger.info(f'整点报时：{now}')
-            await cron(app, now)
+                await cron(app, now)
         await asyncio.sleep(1)
