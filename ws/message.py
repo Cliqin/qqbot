@@ -91,13 +91,13 @@ async def group_msg(ws, data):
         }
         # [CQ:image,file=https://python-abc.xyz/static/img/4882_1.gif]
         await ws.send(json.dumps(ret))
-    await ws.send(json.dumps({
-        'action': 'send_group_msg',
-        'params': {
-            'group_id': data['group_id'],
-            'message': '[CQ:image,file=https://gchat.qpic.cn/gchatpic_new/1113764188/925623507-2625188526-506311AE2039C61F3348C89751E62A8C/0?term=255&is_origin=0]',
-        }
-    }))
+    # await ws.send(json.dumps({
+    #     'action': 'send_group_msg',
+    #     'params': {
+    #         'group_id': data['group_id'],
+    #         'message': '[CQ:image,file=https://gchat.qpic.cn/gchatpic_new/1113764188/925623507-2625188526-506311AE2039C61F3348C89751E62A8C/0?term=255&is_origin=0]',
+    #     }
+    # }))
 
 
 async def private_msg(ws, data):
